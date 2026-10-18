@@ -1,4 +1,5 @@
 import type {
+	McpAppsRuntimeService,
 	PendingPromptsRuntimeService,
 	PendingPromptsServiceApi,
 	RuntimeHost,
@@ -29,7 +30,8 @@ export type RuntimeHostServiceExtensions = RuntimeHost &
 		PendingPromptsRuntimeService &
 			SessionUsageRuntimeService &
 			SessionConnectionRuntimeService &
-			SessionModelRuntimeService
+			SessionModelRuntimeService &
+			McpAppsRuntimeService
 	>;
 
 export function createClineCoreSettingsApi(

@@ -1323,6 +1323,7 @@ export class HubRuntimeHost implements RuntimeHost {
 			"session.mcp_apps.resolve_tool",
 			{ sessionId, toolName },
 			sessionId,
+			{ timeoutMs: null },
 		);
 		if (!reply.ok) {
 			if (reply.error?.code === "unsupported_command") {
@@ -1343,6 +1344,7 @@ export class HubRuntimeHost implements RuntimeHost {
 			"session.mcp_apps.read_resource",
 			{ sessionId, ...request },
 			sessionId,
+			{ timeoutMs: null },
 		);
 		if (!reply.ok) {
 			throw new Error(
